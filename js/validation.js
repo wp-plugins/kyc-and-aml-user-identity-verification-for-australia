@@ -3,7 +3,7 @@ jQuery(document).ready(function(){
   
  var fullpath=window.location.href;
   var split_path=fullpath.split("/");
-  if(split_path[4]=='' || split_path[4].match(/doing/g) || split_path[4].match(/#?/g)){
+  if(split_path[4]==''){
     var site_url='http://'+window.location.hostname;
 }else{
 var site_url='http://'+window.location.hostname+"/"+split_path[3];
