@@ -20,7 +20,7 @@ $table_name = $wpdb->prefix . "identity_verification_auth";
 					<h3><?php echo $response->message?></h3>
 				</div>
 			<?php
-			}if($response->status=='valid'){
+			}if($response->status=='valid' && $response->is_identity_verified!=''){
 			?>
 			<table class="response-tbl">
 					<!-- <tr>
@@ -71,6 +71,19 @@ $table_name = $wpdb->prefix . "identity_verification_auth";
 						<br>
 					</form>
 				</div>			
+			<?php
+			}else{
+			?>
+				<table class="response-tbl">
+					<!-- <tr>
+						<th> Parameter</th>
+						<th> Value</th>
+						<th> Status</th>
+					</tr> -->
+					<tr>
+						<td colspan="3" style="text-align:center"><b><?php echo $response->message?></b></td>
+					</tr>
+				</table>
 			<?php
 			}
 			?>
