@@ -169,7 +169,7 @@
 					'first_name'=>$identity_response->first_name,
 					'last_name'=>$identity_response->last_name,
 					'date_of_birth'=>$identity_response->date_of_birth,
-					'is_verified'=>($identity_response->is_identity_validated==1?'1':0),
+					'is_verified'=>($identity_response->is_identity_verified==1?'1':0),
 					'updated_date'=>date("Y-m-d H:i:s")
 			);
 			$wpdb->insert('IDV_verified_users',$store_user);
