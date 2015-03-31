@@ -35,7 +35,7 @@ $table_name = $wpdb->prefix . "identity_verification_auth";
 
 						<td>Identity Type</td>
 						<td><?php echo ucwords(str_replace("_"," ",$response->identity_type))?></td>
-						<td><?php echo ($response->is_identity_validated==1?'<img src="'.plugins_url('images/icons/tick_105.png' , __FILE__).'">':'Not Verified')?></td>
+						<td><?php echo ($response->is_identity_verified==1?'<img src="'.plugins_url('images/icons/tick_105.png' , __FILE__).'">':'Not Verified')?></td>
 					</tr>
 					<tr>
 						<td>Country</td>
@@ -64,7 +64,7 @@ $table_name = $wpdb->prefix . "identity_verification_auth";
 					</tr> -->
 				</table>
 				<div>
-					<form action="<?php echo ($response->is_identity_validated=='1'?$redirect_url:$error_url)?>" method="post"  style ="text-align:center">
+					<form action="<?php echo ($response->is_identity_verified=='1'?$redirect_url:$error_url)?>" method="post"  style ="text-align:center">
 						<input type="hidden" value='<?php echo json_encode($response)?>' name="response">
 						<input type="submit" value="Continue" style="text-align:center;background:rgb(78,159,216) !important;color:#fff !important;">
 						<br>
