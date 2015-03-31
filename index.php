@@ -183,7 +183,7 @@
 
 	add_action('wp_enqueue_scripts', 'fwds_styles');
 	function fwds_styles() {
-		//%%KEEPWHITESPACE%%&gt;  
+		
 		wp_register_style('style_name', plugins_url('css/style.css', __FILE__));
 		wp_enqueue_style('style_name');
 		
@@ -202,7 +202,11 @@
 
 	function fwds_scripts() {
 		wp_enqueue_script('jquery');
-
+		?>
+<script>
+	var site_url='<?php echo site_url()?>'
+</script/>
+	<?php
 		wp_register_script('validation', plugins_url('js/validation.js', __FILE__));
 
 		wp_enqueue_script('validation');
