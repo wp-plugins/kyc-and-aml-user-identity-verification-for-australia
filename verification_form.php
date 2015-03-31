@@ -74,6 +74,11 @@
 			echo "Please Provide Client API Credentials to get Short Code";
 		}
 		?>
+		<?php
+	 	if  (!in_array  ('curl', get_loaded_extensions())) {
+        	echo '<div class="update-nag">Install Curl on Your Server to Run this plugin</div>';
+   	 	}
+   	 	?>
 	</div>
 
 	</div>

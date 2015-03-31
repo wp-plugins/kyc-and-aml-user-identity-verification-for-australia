@@ -1,6 +1,6 @@
 <img src="<?php echo plugins_url('/images/loader.gif' , __FILE__)?>" style="display:none" class="loader_image">
 <?php
-if(count($table_fields)>0){
+if(count($table_fields)>0 && in_array  ('curl', get_loaded_extensions())){
 ?>
 <form action="" method="post">
 	<div class="ivs-form">
