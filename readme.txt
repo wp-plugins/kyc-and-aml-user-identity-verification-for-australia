@@ -34,6 +34,8 @@ Upload the zip folder of plugin through Admin Panel
 
 Unzip the folder and place plugin files in /wp-content/plugins/
 
+Enable CURL Extension on Your Server to run this Plugin
+
 
 == Screenshots ==
 1. Here you can configure your API Credentials
